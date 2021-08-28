@@ -7,7 +7,7 @@
  * @invite school
  * @website https://webdefy.tech
  * @source https://github.com/HazimAr/BinaryTyper
- * @updateUrl https://mwittrien.github.io/BetterDiscordAddons/Plugins/SpellCheck/SpellCheck.plugin.js
+ * @updateUrl https://raw.githubusercontent.com/HazimAr/BinaryTyper/main/BinaryTyper.plugin.js
  */
 
 module.exports = class BinaryTyper {
