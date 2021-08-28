@@ -52,10 +52,3 @@ module.exports = class BinaryTyper {
   }
   stop() {}
 };
-
-// document.addEventListener("keydown", function (e) {
-//   if (e.key === "F8") {
-//     BdApi.alert("Enter is pressed!");
-//   }
-//   console.log(e);
-// });
