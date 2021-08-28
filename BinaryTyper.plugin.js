@@ -2,7 +2,7 @@
  * @name BinaryTyper
  * @author Zim#0003
  * @authorId 682715516456140838
- * @version 0.0.2
+ * @version 0.0.3
  * @description When you hit F4, it will covert your current message into binary. But you need to hit space before you send because discord is stupid.
  * @invite school
  * @website https://webdefy.tech
@@ -29,7 +29,7 @@ module.exports = class BinaryTyper {
       const children = [...textArea.children];
       console.log(children);
 
-      for (var i = 0; i < children.length; i++) {
+      for (let i = 0; i < children.length; i++) {
         const message =
           children[i].firstElementChild.firstElementChild.firstElementChild
             .innerHTML;
