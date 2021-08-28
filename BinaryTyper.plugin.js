@@ -21,6 +21,7 @@ module.exports = class BinaryTyper {
         })
         .join(" ");
     }
+
     function convertMessageToBinary() {
       const textArea = document.getElementsByClassName(
         "markup-2BOw-j slateTextArea-1Mkdgw"
