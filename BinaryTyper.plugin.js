@@ -26,6 +26,7 @@ module.exports = class BinaryTyper {
       const textArea = document.getElementsByClassName(
         "markup-2BOw-j slateTextArea-1Mkdgw"
       )[0];
+
       const children = [...textArea.children];
       console.log(children);
 
@@ -43,9 +44,43 @@ module.exports = class BinaryTyper {
         }
       }
     }
+
+    function binaryToText(binary) {
+      return binary
+        .split(" ")
+        .map(function (c) {
+          return String.fromCharCode(parseInt(c, 2));
+        })
+        .join("");
+    }
+
+    function convertBinaryToText() {
+      const textArea = document.getElementsByClassName(
+        "markup-2BOw-j slateTextArea-1Mkdgw"
+      )[0];
+      const children = [...textArea.children];
+      console.log(children);
+
+      for (let i = 0; i < children.length; i++) {
+        const message =
+          children[i].firstElementChild.firstElementChild.firstElementChild
+            .innerHTML;
+
+        if (binaryToText(message.split("<br>")[0]) != "") {
+          children[
+            i
+          ].firstElementChild.firstElementChild.firstElementChild.innerHTML = binaryToText(
+            message.split("<br>")[0]
+          );
+        }
+      }
+    }
+
     document.addEventListener("keydown", function (e) {
       if (e.key == "F4") {
         convertMessageToBinary();
+      } else if (e.key == "F5") {
+        convertBinaryToText();
       }
     });
 
