@@ -66,7 +66,7 @@ module.exports = class BinaryTyper {
           children[i].firstElementChild.firstElementChild.firstElementChild
             .innerHTML;
 
-        if (binaryToText(message.split("<br>")[0]) != "") {
+        if (message.includes("0")) {
           children[
             i
           ].firstElementChild.firstElementChild.firstElementChild.innerHTML = binaryToText(
